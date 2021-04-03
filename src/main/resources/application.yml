@@ -1,0 +1,20 @@
+server:
+  port: 8090
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    # Postgresql database configuration.
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/e-pethealth
+    username: postgres
+    password: changeme
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+logging:
+  level:
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: INFO
+    org.hibernate.type.descriptor.sql.BasicExtractor: INFO
